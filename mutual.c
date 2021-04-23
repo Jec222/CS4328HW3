@@ -22,7 +22,8 @@ int main(void)
     pthread_create(&th[1],NULL,&routine,&names[1]);
     pthread_create(&th[2],NULL,&routine,&names[2]);
 
-    for (int k = 0; k < MAX; k++ )
+    int k;
+    for ( k = 0; k < MAX; k++ )
     {
         pthread_join(th[k],NULL);
     }
